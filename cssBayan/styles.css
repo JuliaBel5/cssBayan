@@ -1,0 +1,155 @@
+.container{
+	width: 90%;
+  	height:90%;
+	margin: 5% auto 5% auto;
+	background-color: #f5ecb6;
+	box-shadow: 
+	0px 0px 0px 1px rgba(217, 196, 74, 0.3), 
+	1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+	0px 2px 2px rgba(0,0,0,0.1);
+	border-radius: 3%;
+}
+.text {
+	color:rgb(236, 120, 26)
+}
+.close {
+	
+	height: 15px;
+	width: 15px;
+	margin-left: 80%;
+  }
+.container:hover .text{
+	color:#6956e4;
+	/*background-color:rgb(191, 212, 224);
+	box-shadow: 
+	0px 0px 0px 1px rgba(155,155,155,0.3), 
+	1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+	0px 2px 2px rgba(0,0,0,0.1);*/
+}
+
+
+
+/*.container:hover input:hover ~ div .close {
+	visibility: visible;
+	
+}*/
+.container:hover input:not(:hover) ~ div .close {
+	transform: rotate(-45deg);
+	 
+}
+.container:hover input:checked ~ div .close {
+	transform: rotate(0deg);
+}
+.container:not(:hover)  .close {
+	 
+	visibility: hidden;
+
+	 
+}
+
+  
+/*label:hover input +.text .close,
+input:checked +.text .close {
+	transform: rotate(-45deg);
+  }*/
+
+
+.container input{
+display: none;
+padding: 250px;
+}
+
+h1 {
+  color:rgb(24, 181, 199);
+  size: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+
+
+.container label{
+	font-family:  'Arial Narrow', Arial, sans-serif;
+	padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 3%;
+  padding-right: 0;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 10%;
+	cursor: pointer;
+	color: rgb(207, 100, 24);
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 33px;
+	font-size: 19px;
+	background: linear-gradient(top, #aadbee 1%, rgba(122, 196, 230, 0.314)0%, #02557b 100%);
+	
+    border-left: none;
+}
+
+.container label:hover{
+	background: rgb(112, 214, 222);
+	color:rgb(232, 125, 24)
+}
+
+.container input:checked + label,
+.container input:checked + label:hover{
+	background: #6956e4;
+	color: #ebf579;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	border-radius: 10px;
+}
+
+.container input:checked  {
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 13px;
+	top: 7px;
+		
+}
+
+.container article{
+	background: rgba(200, 223, 242, 0.5);
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	transition: 
+		height 0.3s ease-in-out, 
+		box-shadow 0.3s linear;
+    border-radius: 10px;
+}
+.container input:checked ~ article{
+	transition: 
+		height 0.3s ease-in-out, 
+		box-shadow 0.1s linear;
+	
+	height: 25%;
+}
+.container input:hover ~ article{
+	transition: 
+		height 0.3s linear, 
+		box-shadow 0.1s linear;
+	
+	height: 25%;
+	
+}
+
+
+article:hover{
+	height: 25%;
+}
+
+.step {
+display: flex;
+}
+
+.step img {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+
