@@ -1,12 +1,94 @@
 body{
 	background-color: #C6786C;
 }
+.small {
+	display: none;
+}
+@media (hover: hover){
+
+}
+@media (hover: none){
+	body {
+		background-color: #DDF8E8;
+	}
+}
+@media (max-width: 280px) {
+	body {
+		background-color: #D1E9EF;
+		}
+	
+.container {
+	display: none;
+}
+.small {
+	display: flex;
+	flex-direction: column;
+}
+.message {
+	margin: auto;
+	display: flex;
+}
+h2{
+	font-size: 1.8rem;
+	color:#32127d
+	
+}
+}
+
 .container{
-	width: 60%;
-  	height: 60%;
+	width: 50%;
+  	height: 50%;
 	margin: 5% auto 5% auto;
 	background-color: #EBDCC2;
 	border-radius: 3%;
+}
+
+h1 {
+	color:#846267;
+	size: 1rem;
+	text-align: center;
+	font-style: italic;
+  }
+@media (max-width:880px) {
+	.container{
+		width: 65%;
+	}
+}
+@media (max-width:680px) {
+	.container{
+		width: 65%;
+	}
+	h1 {
+		size: 0.5rem;
+		padding: 0.1rem;	
+	}
+}
+@media (max-width:530px) {
+	.container{
+		width: 70%;
+	}
+	h1 {
+		size: 0.5rem;
+		padding: 0.1rem;	
+	}
+}
+@media (max-width:480px) {
+	.container{
+		width: 75%;
+	}
+	h1 {
+		size: 0.5rem;
+		padding: 0.1rem;	
+	}
+}
+@media (max-width:380px) {
+	.container{
+		width: 80%;
+	}
+	h1 {
+		size: 0.4rem;
+		padding: 0.1rem;	
+	}
 }
 .text {
 	color:#BE7482;
@@ -24,8 +106,9 @@ body{
 	padding-top: 0.5%;
 	color: grey;
   }
-.container:hover .text{
-	color:#6956e4;
+  .container:hover .text,
+  .container input:checked ~ .text {
+	color: #6956e4;
 }
 .container:hover input:not(:hover) ~ div .close {
 	transform: rotate(-45deg);
@@ -33,6 +116,9 @@ body{
 }
 .container:hover input:checked ~ div .close {
 	transform: rotate(0deg);
+}
+.container input:checked  .text {
+	color:#6956e4;
 }
 .container:not(:hover)  .close {
 	 
@@ -46,12 +132,6 @@ display: none;
 
 }
 
-h1 {
-  color:#846267;
-  size: 1rem;
-  text-align: center;
-  font-style: italic;
-}
 
 
 
@@ -73,7 +153,7 @@ h1 {
 }
 
 
-.container article{
+.content{
 	visibility: hidden;
 	overflow: hidden;
 	height: 0;
@@ -81,7 +161,7 @@ h1 {
 	all 0.5s ease-in-out;
     border-radius: 1%;
 }
-.container input:checked ~ article{
+.container input:checked ~ .content{
 	visibility: visible;
 	transition: 
 	all 0.5s ease-in-out;
@@ -89,7 +169,7 @@ h1 {
 	height: 20em;
 }
 
-.container input:hover ~ article{
+.container input:hover ~ .content{
 	visibility: visible;
 	transition: 
 		all 0.5s ease-in-out;
@@ -101,7 +181,7 @@ h1 {
 	color:rgb(232, 125, 24);
 }
 
-article:hover{
+.content:hover{
 	height: 20em;
 	transition: 
 	all 0.5s ease-in-out;
@@ -119,3 +199,19 @@ display: flex;
   margin: 0 auto;
 }
 
+@media (max-width:530px) {
+	.step img {
+		width: 15em;
+	}
+	.container input:checked ~ .content{
+		height: 17em;
+	}
+}
+@media (max-width:380px) {
+	.step img {
+	width: 13em;
+}
+.container input:checked ~ .content{
+	height: 15em;
+}
+}
