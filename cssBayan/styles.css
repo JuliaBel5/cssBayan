@@ -1,24 +1,23 @@
+body{
+	background-color: #C6786C;
+}
 .container{
-	width: 50%;
-  	height:50%;
+	width: 60%;
+  	height: 60%;
 	margin: 5% auto 5% auto;
-	background-color: #f2eeca;
+	background-color: #EBDCC2;
 	border-radius: 3%;
 }
 .text {
-	color:rgb(236, 120, 26);
+	color:#BE7482;
 	font-size:  1.5rem;
 	font-style: italic;
 	padding-left: 3%;
 	display: flex;
 	justify-content: space-between;
-	border: solid 1px rgba(155,155,155,0.3);
-	border-left: none;
-	border-right: none;
-	border-bottom: none;
+	border-top: solid 0.1rem #AEB4A9;
 }
 .close {
-	
 	height: 4%;
 	width: 4%;
 	margin-right: 3%;
@@ -27,19 +26,7 @@
   }
 .container:hover .text{
 	color:#6956e4;
-	/*background-color:rgb(191, 212, 224);
-	box-shadow: 
-	0px 0px 0px 1px rgba(155,155,155,0.3), 
-	1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
-	0px 2px 2px rgba(0,0,0,0.1);*/
 }
-
-
-
-/*.container:hover input:hover ~ div .close {
-	visibility: visible;
-	
-}*/
 .container:hover input:not(:hover) ~ div .close {
 	transform: rotate(-45deg);
 	 
@@ -50,10 +37,8 @@
 .container:not(:hover)  .close {
 	 
 	visibility: hidden;
-
-	 
+ 
 }
-
 
 
 .container input{
@@ -62,7 +47,7 @@ display: none;
 }
 
 h1 {
-  color:rgb(117, 95, 243);
+  color:#846267;
   size: 1rem;
   text-align: center;
   font-style: italic;
@@ -74,18 +59,12 @@ h1 {
 	font-family:  'Arial Narrow', Arial, sans-serif;
 	padding-top: 1%;
   	padding-bottom: 1%;
- 
-	position: relative;
-	z-index: 20;
-	display: block;
+ 	display: block;
 	height: 10%;
 	cursor: pointer;
 	color: rgb(207, 100, 24);
-	line-height: 33px;
-	font-size: 19px;
-	background: linear-gradient(top, #aadbee 1%, rgba(122, 196, 230, 0.314)0%, #02557b 100%);
-	
-    border-left: none;
+
+    
 }
 
 .container label:hover{
@@ -94,40 +73,28 @@ h1 {
 }
 
 
-.container input:checked  {
-	content: '';
-	position: absolute;
-	width: 24px;
-	height: 24px;
-	right: 13px;
-	top: 7px;
-		
-}
-
 .container article{
+	visibility: hidden;
 	overflow: hidden;
-	height: 0px;
-	position: relative;
-	z-index: 10;
+	height: 0;
 	transition: 
-		height 0.3s ease-in-out, 
-		box-shadow 0.3s linear;
-    border-radius: 10px;
+	all 0.5s ease-in-out;
+    border-radius: 1%;
 }
 .container input:checked ~ article{
+	visibility: visible;
 	transition: 
-		height 0.3s ease-in-out, 
-		box-shadow 0.1s linear;
+	all 0.5s ease-in-out;
 	
-	height: 25%;
+	height: 20em;
 }
 
 .container input:hover ~ article{
+	visibility: visible;
 	transition: 
-		height 0.3s linear, 
-		box-shadow 0.1s linear;
+		all 0.5s ease-in-out;
 	
-	height: 25%;
+	height: 20rem;
 	
 }
 .step0:active  .text {
@@ -135,17 +102,20 @@ h1 {
 }
 
 article:hover{
-	height: 25%;
+	height: 20em;
+	transition: 
+	all 0.5s ease-in-out;
 }
-
+ 
 .step {
 display: flex;
 }
 
 .step img {
 	
-	width: 35%;
-
+	width: 19em;
+	transition: 
+	height 0.5s ease-in-out;
   margin: 0 auto;
 }
 
