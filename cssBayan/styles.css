@@ -1,22 +1,29 @@
 .container{
-	width: 90%;
-  	height:90%;
+	width: 50%;
+  	height:50%;
 	margin: 5% auto 5% auto;
-	background-color: #f5ecb6;
-	box-shadow: 
-	0px 0px 0px 1px rgba(217, 196, 74, 0.3), 
-	1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
-	0px 2px 2px rgba(0,0,0,0.1);
+	background-color: #f2eeca;
 	border-radius: 3%;
 }
 .text {
-	color:rgb(236, 120, 26)
+	color:rgb(236, 120, 26);
+	font-size:  1.5rem;
+	font-style: italic;
+	padding-left: 3%;
+	display: flex;
+	justify-content: space-between;
+	border: solid 1px rgba(155,155,155,0.3);
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
 }
 .close {
 	
-	height: 15px;
-	width: 15px;
-	margin-left: 80%;
+	height: 4%;
+	width: 4%;
+	margin-right: 3%;
+	padding-top: 0.5%;
+	color: grey;
   }
 .container:hover .text{
 	color:#6956e4;
@@ -47,21 +54,16 @@
 	 
 }
 
-  
-/*label:hover input +.text .close,
-input:checked +.text .close {
-	transform: rotate(-45deg);
-  }*/
 
 
 .container input{
 display: none;
-padding: 250px;
+
 }
 
 h1 {
-  color:rgb(24, 181, 199);
-  size: 2rem;
+  color:rgb(117, 95, 243);
+  size: 1rem;
   text-align: center;
   font-style: italic;
 }
@@ -71,16 +73,14 @@ h1 {
 .container label{
 	font-family:  'Arial Narrow', Arial, sans-serif;
 	padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 3%;
-  padding-right: 0;
+  	padding-bottom: 1%;
+ 
 	position: relative;
 	z-index: 20;
 	display: block;
 	height: 10%;
 	cursor: pointer;
 	color: rgb(207, 100, 24);
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 	line-height: 33px;
 	font-size: 19px;
 	background: linear-gradient(top, #aadbee 1%, rgba(122, 196, 230, 0.314)0%, #02557b 100%);
@@ -89,17 +89,10 @@ h1 {
 }
 
 .container label:hover{
-	background: rgb(112, 214, 222);
+	
 	color:rgb(232, 125, 24)
 }
 
-.container input:checked + label,
-.container input:checked + label:hover{
-	background: #6956e4;
-	color: #ebf579;
-	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
-	border-radius: 10px;
-}
 
 .container input:checked  {
 	content: '';
@@ -112,7 +105,6 @@ h1 {
 }
 
 .container article{
-	background: rgba(200, 223, 242, 0.5);
 	overflow: hidden;
 	height: 0px;
 	position: relative;
@@ -129,6 +121,7 @@ h1 {
 	
 	height: 25%;
 }
+
 .container input:hover ~ article{
 	transition: 
 		height 0.3s linear, 
@@ -137,7 +130,9 @@ h1 {
 	height: 25%;
 	
 }
-
+.step0:active  .text {
+	color:rgb(232, 125, 24);
+}
 
 article:hover{
 	height: 25%;
@@ -148,8 +143,9 @@ display: flex;
 }
 
 .step img {
-  height: 150px;
-  width: 150px;
+	
+	width: 35%;
+
   margin: 0 auto;
 }
 
