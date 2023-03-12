@@ -26,11 +26,30 @@ body{
 	  visibility: hidden;
    
   }
+  .container input:hover ~ .content{
+	visibility: visible;
+	transition: 
+		all 0.5s ease-in-out;
+	
+	height: 20rem;
+
+}
+.container label:hover{
+	
+	color:rgb(232, 125, 24)
+}
+.content:hover{
+	height: 20em;
+	transition: 
+	all 0.5s ease-in-out;
+}
+
 }
 @media (hover: none){
 	body {
 		background-color: #B59DA4;
 	}
+}
 	.container input:checked ~ .text {
 		color: #6956e4;
 	}
@@ -51,7 +70,7 @@ body{
 		visibility: hidden;
 	 
 	}
-}
+
 
 
 
@@ -92,9 +111,25 @@ h1 {
 	text-align: center;
 	font-style: italic;
   }
+  .text {
+	color:#BE7482;
+	font-size:  1.5rem;
+	font-style: italic;
+	padding-left: 3%;
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 0.1rem #AEB4A9;
+}
 @media (max-width:880px) {
 	.container{
 		width: 65%;
+	}
+	h1 {
+		font-size: 1.5em;
+		padding: 0.1rem;	
+	}
+	.text {
+		font-size:  1.5em;
 	}
 }
 @media (max-width:700px) {
@@ -129,19 +164,14 @@ h1 {
 		width: 90%;
 	}
 	h1 {
-		
+		font-size: 1.3em;
 		padding: 0.1rem;	
 	}
+	.text {
+		font-size:  1.3em;
+	}
 }
-.text {
-	color:#BE7482;
-	font-size:  1.5rem;
-	font-style: italic;
-	padding-left: 3%;
-	display: flex;
-	justify-content: space-between;
-	border-top: solid 0.1rem #AEB4A9;
-}
+
 .close {
 	height: 3%;
 	width: 3%;
@@ -172,10 +202,6 @@ display: none;
     
 }
 
-.container label:hover{
-	
-	color:rgb(232, 125, 24)
-}
 
 
 .content{
@@ -194,23 +220,12 @@ display: none;
 	height: 20em;
 }
 
-.container input:hover ~ .content{
-	visibility: visible;
-	transition: 
-		all 0.5s ease-in-out;
-	
-	height: 20rem;
-	
-}
+
 .step0:active  .text {
 	color:rgb(232, 125, 24);
 }
 
-.content:hover{
-	height: 20em;
-	transition: 
-	all 0.5s ease-in-out;
-}
+
  
 .step {
 display: flex;
