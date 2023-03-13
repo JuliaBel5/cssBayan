@@ -1,0 +1,335 @@
+body {
+	background-color: #C6786C;
+}
+*{
+	-webkit-tap-highlight-color: transparent; 
+ }
+.small {
+	display: none;
+}
+
+@media (hover: hover) {
+
+	.container:hover .text,
+	.container input:checked~.text {
+		color: #6956e4;
+	}
+
+	.container:hover input:not(:hover)~div .close {
+		transform: rotate(-45deg);
+		transition: all 0.5s linear;
+
+	}
+
+	.container:hover input:checked~div .close {
+		transform: rotate(0deg);
+		transition: all 0.5s linear;
+	}
+
+	.container input:checked .text {
+		color: #6956e4;
+	}
+
+	.container:not(:hover) .close {
+
+		visibility: hidden;
+
+	}
+
+	.container input:hover~.content {
+		visibility: visible;
+		transition:
+			all 0.5s ease-in-out;
+
+		height: 20rem;
+
+	}
+
+	.container label:hover {
+
+		color: rgb(232, 125, 24)
+	}
+
+	.content:hover {
+		height: 20em;
+		transition:
+			all 0.5s ease-in-out;
+	}
+
+}
+
+@media (hover: none) {
+	body {
+		background-color: #B59DA4;
+	}
+}
+
+.container input:checked~.text {
+	color: #6956e4;
+}
+
+input:checked~div .close {
+	transform: rotate(0deg);
+	transition: all 0.5s linear;
+}
+
+.container input:not(:hover)~div .close {
+	transform: rotate(-45deg);
+	transition: all 0.5s linear;
+
+}
+
+.container input:checked .text {
+	color: #6956e4;
+}
+
+.container:not(:hover) .close {
+
+	visibility: hidden;
+
+}
+
+
+
+
+@media (max-width: 280px) {
+	body {
+		background-color: #D1E9EF;
+	}
+
+	.container {
+		display: none;
+	}
+
+	.small {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.message {
+		margin: auto;
+		display: flex;
+	}
+
+	h2 {
+		font-size: 1.8rem;
+		color: #32127d
+	}
+}
+
+.container {
+	width: 50%;
+	height: 50%;
+	margin: 5% auto 5% auto;
+	background-color: #EBDCC2;
+	border-radius: 3%;
+}
+
+h1 {
+	color: #846267;
+	size: 1rem;
+	text-align: center;
+	font-style: italic;
+}
+
+.text {
+	color: #BE7482;
+	font-size: 1.5rem;
+	font-style: italic;
+	padding-left: 3%;
+	display: flex;
+	justify-content: space-between;
+	border-top: solid 0.1rem #AEB4A9;
+}
+
+@media (max-width:880px) {
+	.container {
+		width: 60%;
+	}
+
+	h1 {
+		font-size: 1.5em;
+		padding: 0.1rem;
+	}
+
+	.text {
+		font-size: 1.3em;
+	}
+}
+
+@media (max-width:700px) {
+	.container {
+		width: 70%;
+	}
+
+	h1 {
+
+		padding: 0.1rem;
+	}
+}
+
+@media (max-width:600px) {
+	.container {
+		width: 75%;
+	}
+
+	h1 {
+
+		padding: 0.1rem;
+	}
+}
+
+@media (max-width:480px) {
+	.container {
+		width: 80%;
+	}
+
+	h1 {
+
+		padding: 0.1rem;
+	}
+}
+
+@media (max-width:380px) {
+	.container {
+		width: 90%;
+	}
+
+	h1 {
+		font-size: 1.3em;
+		padding: 0.1rem;
+	}
+
+	.text {
+		font-size: 1.2em;
+	}
+}
+
+.close {
+	height: 3%;
+	width: 3%;
+	margin-right: 3%;
+	padding-top: 0.5%;
+	transition: all 0.5s linear;
+}
+
+
+
+.container input {
+	display: none;
+
+}
+
+.container label {
+	font-family: 'Arial Narrow', Arial, sans-serif;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	display: block;
+	height: 10%;
+	cursor: pointer;
+	color: rgb(207, 100, 24);
+
+}
+
+.content {
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+	transition:
+		all 0.5s ease-in-out;
+	border-radius: 1%;
+}
+
+.container input:checked~.content {
+	visibility: visible;
+	transition:
+		all 0.5s ease-in-out;
+
+	height: 20em;
+}
+
+
+.step0:active .text {
+	color: rgb(232, 125, 24);
+}
+.step0:active .step {
+	opacity: 0.5
+}
+
+.step {
+	display: flex;
+}
+
+.step img {
+
+	width: 19em;
+	transition:
+		height 0.5s ease-in-out;
+	margin: 0 auto;
+}
+
+@media (max-width:1000px) {
+	.close {
+		height: 3.5%;
+		width: 3.5%;
+		padding-top: 1%;
+	}
+}
+
+@media (max-width:800px) {
+	.close {
+		height: 4%;
+		width: 4%;
+		padding-top: 1%;
+	}
+}
+
+@media (max-width:700px) {
+	.close {
+		height: 4%;
+		width: 4%;
+		padding-top: 1%;
+	}
+}
+
+@media (max-width:600px) {
+	.close {
+		height: 5%;
+		width: 5%;
+		padding-top: 1%;
+	}
+}
+
+@media (max-width:500px) {
+	.step img {
+		width: 15em;
+		padding-top: 3%;
+	}
+
+	.container input:checked~.content {
+		height: 17em;
+	}
+
+	.close {
+		height: 5%;
+		width: 5%;
+		padding-top: 1%;
+	}
+}
+
+@media (max-width:380px) {
+	.step img {
+		width: 13em;
+		padding-top: 3%;
+	}
+
+	.container input:checked~.content {
+		height: 15em;
+	}
+
+	.close {
+		height: 5%;
+		width: 5%;
+		padding-top: 1%;
+	}
+}
