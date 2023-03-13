@@ -252,7 +252,9 @@ h1 {
 .step0:active .text {
 	color: rgb(232, 125, 24);
 }
-
+.step0:active .step {
+	opacity: 0.5
+}
 
 .step {
 	display: flex;
